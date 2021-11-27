@@ -1,0 +1,176 @@
+/* Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+/* Boilerplate */
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+  /* Font family */
+
+  --poppings: "Poppins", sans-serif;
+
+  /* Colors */
+
+  --violeta: hsl(257, 40%, 49%);
+  --soft_magenta: hsl(300, 69%, 71%);
+}
+
+/* Layout */
+
+body {
+  background: url("./images/bg-desktop.svg") no-repeat center center fixed
+    var(--violeta);
+  background-size: cover;
+}
+
+main {
+  /* width: 128rem; */
+  width: clamp(35rem, 82.5%, 128rem);
+  margin: 16rem auto;
+}
+
+.brand_logo {
+  width: 22rem;
+  margin-bottom: 9rem;
+}
+
+.cta_img {
+  object-fit: contain;
+}
+.cta_content {
+  margin-bottom: 2.2rem;
+  color: white;
+  display: flex;
+}
+
+.cta_section {
+  margin-top: 4.5rem;
+  margin-left: 6rem;
+}
+
+.cta_title {
+  margin-bottom: 2.8rem;
+  font-size: 4rem;
+  font-family: var(--poppings);
+}
+
+.cta_txt {
+  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+}
+
+.cta_btn {
+  padding: 1.5rem 6.5rem;
+  font-family: var(--poppings);
+  color: var(--violeta);
+  font-size: 1.8rem;
+  border-radius: 5rem;
+  border: none;
+  box-shadow: 0.4rem 0.8rem 0.5rem rgb(0 0 0 / 0.3);
+  cursor: pointer;
+}
+
+.cta_btn:hover {
+  background-color: var(--soft_magenta);
+  color: white;
+}
+
+.social_networks {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 15rem;
+  margin-left: auto;
+}
+
+.social_networks a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.9rem;
+  color: white;
+}
+
+.social_networks .facebook {
+  font-size: 1.85rem;
+}
+
+.social_networks li:hover > a {
+  border-color: var(--soft_magenta);
+  color: var(--soft_magenta);
+}
+
+footer {
+  width: 30rem;
+  margin: 2rem auto;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
+footer a {
+  color: var(--soft_magenta);
+}
+
+@media screen and (max-width: 1250px) {
+  body {
+    background-image: url("./images/bg-mobile.svg");
+  }
+
+  main {
+    margin-top: 7rem;
+  }
+
+  .cta_content {
+    flex-direction: column;
+    margin-bottom: 13rem;
+  }
+
+  .cta_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .cta_btn {
+    padding: 1.5rem 12rem;
+  }
+
+  .cta_title {
+    text-align: center;
+  }
+
+  .cta_txt {
+    margin-bottom: 5.5rem;
+    text-align: center;
+    font-size: 2.4rem;
+  }
+
+  .social_networks {
+    margin: 0 auto;
+  }
+}
